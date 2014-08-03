@@ -3,4 +3,5 @@ npm-debug.log
 js/libs
 /.tmp
 bundle.js
+bundle.js.map
 /logs/*

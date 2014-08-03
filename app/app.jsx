@@ -8,7 +8,10 @@ var React = require('react')
   , actions
   , Katuma = require('./katuma')
   , Stores = require('./stores/index')
-  , Actions = require('./actions/index');
+  , Actions = require('./actions/index')
+  , Routes = require('react-router').Routes
+  , Route = require('react-router').Route
+  , Link = require('react-router').Link;
 
 var flux = new Fluxxor.Flux(Stores, Actions);
 
@@ -48,6 +51,12 @@ var Application = React.createClass({
           <input type="submit" value="Add Todo" />
         </form>
         <button onClick={this.clearCompletedTodos}>Clear Completed</button>
+        <br />
+        <Link to="foo">Foo route</Link>
+
+        <hr />
+
+        {this.props.activeRouteHandler() || 'No route clicked'}
       </div>
     );
   },
@@ -89,4 +98,19 @@ var TodoItem = React.createClass({
   }
 });
 
-React.renderComponent(<Application flux={flux} />, document.getElementById("app"));
+var Foo = React.createClass({
+  mixins: [FluxChildMixin]
+, render: function() {
+    return <span>Hello router</span>;
+  }
+});
+
+React.renderComponent((
+  <Routes location='history'>
+    <Route handler={Application} flux={flux}>
+      <Route name='foo' path='/foo' handler={Foo} flux={flux} />
+    </Route>
+  </Routes>
+), document.getElementById("app"));
+
+// React.renderComponent(<Application flux={flux} />, document.getElementById("app"));
