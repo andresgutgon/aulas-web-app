@@ -11,3 +11,10 @@ I'm trying to apply flux pattern with React.js and solve these problems:
 7. **Development Enviroment** : Use a Rails API backend and this frontend under the same PORT.
 8. **testing** : Find the best way to test a Flux + React powered app. Facebook has something. Investigate.
 8. **Gulp** : Instead of Grunt try __Gulp__
+
+## References
+
+1. [React](http://facebook.github.io/react)
+2. [Flux Arquitecture](http://facebook.github.io/react/docs/flux-overview.html)
+3. [fluxxor](http://fluxxor.com/)
+4. [react-router](https://github.com/rackt/react-router)
