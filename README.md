@@ -10,3 +10,4 @@ I'm trying to apply flux pattern with React.js and solve these problems:
 7. **Assets management** : Use webpack
 7. **Development Enviroment** : Use a Rails API backend and this frontend under the same PORT.
 8. **testing** : Find the best way to test a Flux + React powered app. Facebook has something. Investigate.
+8. **Gulp** : Instead of Grunt try __Gulp__
