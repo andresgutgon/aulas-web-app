@@ -6,7 +6,7 @@ var React = require('react')
   , FluxChildMixin = Fluxxor.FluxChildMixin(React)
   , StoreWatchMixin = Fluxxor.StoreWatchMixin
   , actions
-  , Katuma = require('./katuma')
+  , Aulas = require('./aulas')
   , Stores = require('./stores/index')
   , Actions = require('./actions/index')
   , Routes = require('react-router').Routes
@@ -16,7 +16,7 @@ var React = require('react')
 var flux = new Fluxxor.Flux(Stores, Actions);
 
 window.React = React;
-window.Katuma = Katuma;
+window.Aulas = Aulas;
 window.flux = flux;
 
 

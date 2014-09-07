@@ -1,17 +1,17 @@
 'use strict';
 
 var Todo
-  , Katuma = require('../katuma');
+  , Aulas = require('../aulas');
 
 Todo = {
   add: function (text) {
-    this.dispatch(Katuma.Events.todo.ADD_TODO, {text: text});
+    this.dispatch(Aulas.Events.todo.ADD_TODO, {text: text});
   }
 , toggle: function (todo) {
-    this.dispatch(Katuma.Events.todo.TOGGLE_TODO, {todo: todo});
+    this.dispatch(Aulas.Events.todo.TOGGLE_TODO, {todo: todo});
   }
 , clear: function () {
-    this.dispatch(Katuma.Events.todo.CLEAR_TODOS);
+    this.dispatch(Aulas.Events.todo.CLEAR_TODOS);
   }
 };
 

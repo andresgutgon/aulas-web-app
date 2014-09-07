@@ -1,7 +1,7 @@
 'use strict';
 
 var Fluxxor = require('fluxxor')
-  , Katuma = require('../katuma')
+  , Aulas = require('../aulas')
   , Todo;
 
 Todo = Fluxxor.createStore({
@@ -9,9 +9,9 @@ Todo = Fluxxor.createStore({
     this.todos = [];
 
     this.bindActions(
-      Katuma.Events.todo.ADD_TODO, this.onAddTodo
-    , Katuma.Events.todo.TOGGLE_TODO, this.onToggleTodo
-    , Katuma.Events.todo.CLEAR_TODOS, this.onClearTodos
+      Aulas.Events.todo.ADD_TODO, this.onAddTodo
+    , Aulas.Events.todo.TOGGLE_TODO, this.onToggleTodo
+    , Aulas.Events.todo.CLEAR_TODOS, this.onClearTodos
     );
   },
 
