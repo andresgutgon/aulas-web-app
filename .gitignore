@@ -2,6 +2,8 @@ node_modules/
 npm-debug.log
 js/libs
 /.tmp
+dist
+.DS_Store
 bundle.js
 bundle.js.map
 /logs/*

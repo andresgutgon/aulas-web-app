@@ -2,7 +2,7 @@ var webpack = require("webpack");
 
 module.exports = {
   cache: true,
-  entry: "./app/app.jsx",
+  entry: "./app/javascripts/app.jsx",
   output: {
     path: __dirname + "/app",
     filename: "bundle.js"
@@ -10,9 +10,10 @@ module.exports = {
   devtool: "source-map",
   module: {
     loaders: [
-      // { test: /\.less$/, loader: "style!css!less" },
-      { test: /\.jsx$/, loader: "jsx-loader" },
-      { test: /\.json$/, loader: "json" }
+      {
+        test: /\.jsx$/
+      , loader: "jsx-loader"
+      }
     ]
   }
 };
