@@ -4,6 +4,7 @@ var gulp = require('gulp')
   , connect = require('gulp-connect')
   , sass = require('gulp-sass')
   , clean = require('gulp-clean')
+  , processhtml = require('gulp-processhtml')
   , autoprefixer = require('gulp-autoprefixer')
   , minifycss = require('gulp-minify-css')
   , rename = require('gulp-rename')
@@ -46,7 +47,17 @@ gulp.task('webpack', function() {
  * Clean dist directory. read: false make this task faster
  */
 gulp.task('clean', function () {
-  return gulp.src(bases.dist, {read: false}).pipe(clean());
+  return gulp.src(bases.dist, {read: false})
+  .pipe(clean());
+});
+
+/**
+ * Process index file
+ */
+gulp.task('process_html', ['clean'], function () {
+  gulp.src('./app/index.html')
+    .pipe(processhtml('index.html'))
+    .pipe(gulp.dest(bases.dist));
 });
 
 /**
@@ -90,4 +101,4 @@ gulp.task('watch', function() {
   gulp.watch('./app/javascripts/**/*.js', ['webpack', 'notify']);
 });
 
-gulp.task('default', ['copy', 'styles', 'webpack', 'webserver', 'watch']);
+gulp.task('default', ['process_html', 'styles', 'webpack', 'webserver', 'watch']);

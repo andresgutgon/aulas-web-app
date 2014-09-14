@@ -30,6 +30,7 @@
     "gulp-minify-css": "^0.3.4",
     "gulp-notify": "^1.6.0",
     "gulp-rename": "^1.2.0",
+    "gulp-processhtml": "0.0.6",
     "gulp-sass": "0.7.3",
     "gulp-webpack": "0.3.0",
     "jquery": "~2.1.0",
