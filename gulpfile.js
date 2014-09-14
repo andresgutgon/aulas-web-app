@@ -83,6 +83,7 @@ gulp.task('webserver', function() {
   connect.server({
     root: bases.dist
   , port: 8000
+  , fallback: 'dist/index.html'
   , middleware: function(connect, opt) {
      return [
         modRewrite([
