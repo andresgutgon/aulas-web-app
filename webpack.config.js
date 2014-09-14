@@ -2,7 +2,7 @@ var webpack = require("webpack");
 
 module.exports = {
   cache: true,
-  entry: "./app/javascripts/app.jsx",
+  entry: "./app/javascripts/app.js",
   output: {
     path: __dirname + "/app",
     filename: "bundle.js"
@@ -11,7 +11,7 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.jsx$/
+        test: /\.js$/
       , loader: "jsx-loader"
       }
     ]
