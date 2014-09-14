@@ -101,4 +101,4 @@ gulp.task('watch', function() {
   gulp.watch('./app/javascripts/**/*.js', ['webpack', 'notify']);
 });
 
-gulp.task('default', ['process_html', 'styles', 'webpack', 'webserver', 'watch']);
+gulp.task('default', ['process_html', 'styles', 'webpack', 'webserver', 'notify', 'watch']);
