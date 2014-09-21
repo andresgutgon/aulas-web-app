@@ -5,4 +5,4 @@ var React = require('react')
   , Routes = Router.Routes
   , AppRoutes = require('./routes/routes');
 
-React.renderComponent(<Routes location='history' children={AppRoutes}/>, document.getElementById('app'));
+React.renderComponent(<Routes location='history' children={AppRoutes} />, document.getElementById('app'));

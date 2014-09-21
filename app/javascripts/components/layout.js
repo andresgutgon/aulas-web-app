@@ -4,20 +4,24 @@
 var Layout
   , React = require('react')
   , Router = require('react-router')
-  , Link = Router.Link;
+  , NavItem = require('./nav-item');
 
+/*
+*/
 Layout = React.createClass({
   render: function() {
     return (
-      <div className="js-offcanvas off-canvas">
-        <div className="js-offcanvas-content off-canvas-content full-expanded">
-          {this.props.activeRouteHandler()}
-        </div>
-
-        <button className="js-offcanvas-button open-sidebar"><i className="fa fa-2x fa-bars"></i></button>
-
-        <div className="off-canvas-sidebar full-expanded scroll-y">
-          <Link to='tempates_index'>Go to templates</Link>
+      <div className="container">
+        <div className="row">
+          <div className="col-md-2">
+            <ul className="nav nav-pills nav-stacked">
+              <NavItem to="/">Home</NavItem>
+              <NavItem to='tempates'>Templates</NavItem>
+            </ul>
+          </div>
+          <div className="col-md-10">
+            {this.props.activeRouteHandler()}
+          </div>
         </div>
       </div>
     );

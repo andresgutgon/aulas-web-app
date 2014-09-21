@@ -3,12 +3,12 @@
 
 var Router = require('react-router')
   , Route = Router.Route
-  , Routes = Router.Routes
   , routes;
 
 routes = function() {
   return [
-    <Route key='tempates_index' name='tempates_index' path='tempates' handler={require('./views/index')} />
+    <Route name='tempates' handler={require('./views/index')} />
+  , <Route name='tempate' path='tempates/:templateId' handler={require('./views/show')} />
   ]
 };
 

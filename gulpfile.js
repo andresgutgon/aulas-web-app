@@ -28,7 +28,7 @@ paths = {
 /**
  * Manipulate Sass files to generate css
  */
-gulp.task('styles', function() {
+gulp.task('styles', ['notify'], function() {
   return gulp.src('app/stylesheets/application.scss')
     .pipe(sass({
       sourcemapPath: '../app/stylesheets'
@@ -63,7 +63,7 @@ gulp.task('optimize_images', function () {
 /**
  * Use webpack to generate JS code
  */
-gulp.task('webpack', function() {
+gulp.task('webpack', ['notify'], function() {
   return gulp.src('app/javascripts/**/*.js')
   .pipe(webpack(require('./webpack.config.js')))
   .pipe(gulp.dest(bases.dist));
@@ -129,8 +129,8 @@ gulp.task('webserver', function() {
  * Watch for changes on js/sass
  */
 gulp.task('watch', function() {
-  gulp.watch('./app/stylesheets/**/*.scss', ['styles', 'notify']);
-  gulp.watch('./app/javascripts/**/*.js', ['webpack', 'notify']);
+  gulp.watch('./app/stylesheets/**/*.scss', ['styles']);
+  gulp.watch('./app/javascripts/**/*.js', ['webpack']);
 });
 
 gulp.task('default', ['clean', 'process_html', 'styles', 'optimize_images','copy_font_awesome', 'webpack', 'webserver', 'watch']);
