@@ -8,7 +8,7 @@ var Router = require('react-router')
 
 routes = function() {
   return [
-    <Route key='sandbox_index' name='sandbox_index' path='sandbox' handler={require('./views/index')} />
+    <Route key='tempates_index' name='tempates_index' path='tempates' handler={require('./views/index')} />
   ]
 };
 

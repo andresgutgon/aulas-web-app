@@ -1,3 +1,13 @@
-@import "bar";
+@import "core/variables";
 
-.lol {color: blue;}
+// :::: VENDOR ::::
+@import "vendor/font-awesome/bower";
+@import "vendor/boostrap/variables";
+@import "vendor/boostrap/bower";
+
+// :::: CORE ::::
+@import "core/base";
+@import "core/utils";
+
+// :::: MODULES ::::
+@import "modules/lateral_nav";

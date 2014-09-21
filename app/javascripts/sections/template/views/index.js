@@ -8,7 +8,7 @@ Index = React.createClass({
   render: function() {
     return (
       <div>
-        Index of Sandboxes lists
+        Index of Templates
       </div>
     );
   }

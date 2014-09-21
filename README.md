@@ -1,3 +1,9 @@
+## INSTALL
+`cd this-project-root`
+`npm install bower -g`
+`bower install bootstrap-sass-official`
+
+
 ## What is this?
 I'm trying to apply flux pattern with React.js and solve these problems:
 

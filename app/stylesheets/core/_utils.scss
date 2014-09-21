@@ -1,0 +1,52 @@
+.js-hide {
+  display: none;
+}
+
+// When you want a zone to be horizontal/vertical scrollable `.scroll`
+// Explanation here: http://css-tricks.com/custom-scrollbars-in-webkit/
+//
+// Styleguide x.x
+.scroll {
+  overflow: auto;
+}
+
+// When you want a zone to be vertical scrollable `.scroll-y`
+//
+// Styleguide x.x
+.scroll-y {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+// When you want a zone to be horizontal scrollable `.scroll-x`
+//
+// Styleguide x.x
+.scroll-x {
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+// `.position-absolute` Helper to position absolute an element
+//
+// Styleguide x.x
+.position-absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+// `.full-expanded` Like `.position-absolute`, but full expanded
+//
+// Styleguide x.x
+.full-expanded {
+  @extend .position-absolute;
+  bottom: 0;
+  right: 0;
+}
+
+// `.default-inner-padding` helper class to add a div with padding
+//
+// Styleguide x.x
+.default-inner-padding {
+  padding: $default_padding;
+}

@@ -6,11 +6,11 @@ var Router = require('react-router')
   , Route = Router.Route
   , Routes = Router.Routes
   , AppLayout = require('../components/layout')
-  , Sandbox = require('../sections/sandbox/routes');
+  , Template = require('../sections/template/routes');
 
 module.exports = (
   <Route handler={AppLayout}>
-    {Sandbox()}
+    {Template()}
   </Route>
 );
 

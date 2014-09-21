@@ -1,0 +1,37 @@
+// :::: COLOR PALETTE ::::
+// http://www.colourlovers.com/palette/1214760/lol_tv_show
+$brand_yellow: #FFBF00;
+$brand_soft_yellow: #FFECA6;
+
+// Green
+$brand_green: #8FC98F;
+
+// Blue
+$brand_blue: #6F99A5;
+$brand_dark_blue: #323747;
+$brand_soft_blue: rgba($brand_blue, 0.1);
+$brand_super_soft_blue: rgba($brand_blue, 0.04);
+$brand_extreme_soft_blue: rgba($brand_blue, 0.02);
+
+// Grey scale
+$color_dark_1: #222;
+$gray-darker: lighten(#000, 13.5%);
+$gray-dark: lighten(#000, 20%);
+$gray: lighten(#000, 33.5%);
+$gray-light: lighten(#000, 60%);
+$gray-lighter: lighten(#000, 93.5%);
+$grey_light: #F9F9F9;
+$grey_extra_light: #FAFAFA;
+
+// Font
+$font_family_sans: "Open Sans", Arial, sans-serif;
+$fs_small: 11px;
+$fs_regular: 13px;
+
+$font_weight_light: 300;
+$font_weight_normal: 400;
+$font_weight_semi_bold: 600;
+$font_weight_bold: 700;
+
+// Layout
+$default_padding: 20px;
