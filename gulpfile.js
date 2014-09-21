@@ -10,6 +10,7 @@ var gulp = require('gulp')
   , rename = require('gulp-rename')
   , modRewrite = require('connect-modrewrite')
   , notify = require("gulp-notify")
+  , path = require('path')
   , bases
   , paths;
 
@@ -65,7 +66,13 @@ gulp.task('process_html', ['clean'], function () {
  */
 gulp.task('notify', function () {
   gulp.src('app/index.html')
-  .pipe(notify({message: 'Go for it!'}));
+  .pipe(notify({
+    title: 'Ready'
+  , subtitle: 'Aulas front End'
+  , message: 'Go for it!'
+  , sound: "Frog"
+  , icon: path.join(__dirname, 'app', 'images', "aulas-avatar.png")
+  }));
 });
 
 /**
